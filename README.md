@@ -90,13 +90,19 @@ Position (center, left wing, right wing, defenseman) and shooting hand (left/rig
 
 #### Engineered Features (12 features)
 
-These are features we built ourselves on top of the raw data:
+We built 12 additional features on top of the raw data. Three are novel features based on hockey domain knowledge — these are the ones that meaningfully improve the model. The other 9 are standard derivations (score differential, power play flags, fatigue ratios, etc.) that reformat existing columns into forms the model can use more effectively.
+
+**Novel features:**
 
 1. **Zone Danger** — We divided the ice surface into a grid and computed the historical goal rate from each zone across 2M+ shots. This captures spatial patterns that raw distance/angle miss — like the fact that shots from the left hash marks convert differently than shots from the right circle at the same distance. **This is our single most important feature (17.8% of model importance).**
 
 2. **Shooter Talent** — Each shooter's historical shooting percentage relative to the league average, with statistical shrinkage for small sample sizes. Elite shooters like Alex Ovechkin get a positive adjustment. A 4th-liner with limited data gets pulled toward the league average.
 
 3. **Goalie Quality** — Each goalie's historical save percentage relative to the league average. Facing a Vezina-caliber goalie vs. an AHL callup significantly affects goal probability.
+
+**Standard derivations (9 features):**
+
+These are straightforward transformations that any hockey model would include — score differential from the shooter's perspective, power play / shorthanded flags, time remaining in the period, shift length ratios, and distance-angle interactions. They collectively account for about 5% of model importance. We don't list them individually because they aren't novel — they're table stakes for an xG model.
 
 ---
 
