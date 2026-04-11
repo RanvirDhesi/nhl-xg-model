@@ -2,7 +2,7 @@
 
 A machine learning model that predicts the probability of any NHL (National Hockey League) shot becoming a goal. Trained on **2,066,537 shots across 19 seasons (2007-2025)** of NHL data.
 
-Built by [@SensRandy](https://twitter.com/SensRandy) | Analytics by [@Nhl_Historian](https://twitter.com/Nhl_Historian)
+Built by [@SensRandy](https://twitter.com/SensRandy)
 
 ---
 
@@ -141,7 +141,7 @@ The remaining 42 features contribute the other 30%. Each one is individually sma
 
 ## Applications
 
-This model powers the analytics content on [@SensRandy](https://twitter.com/SensRandy) and [@Nhl_Historian](https://twitter.com/Nhl_Historian):
+This model powers the analytics content on [@SensRandy](https://twitter.com/SensRandy):
 
 - **Shot Maps.** A visual display of every shot in a game, with each dot sized according to its goal probability.
 - **xG Flow Charts.** Cumulative expected goals plotted over the course of a game, showing which team was creating more dangerous chances and when.
@@ -184,6 +184,5 @@ This model powers the analytics content on [@SensRandy](https://twitter.com/Sens
 ## Contact
 
 - Twitter: [@SensRandy](https://twitter.com/SensRandy) (Ottawa Senators analytics)
-- Twitter: [@Nhl_Historian](https://twitter.com/Nhl_Historian) (Daily NHL history)
 
 Built with data from [MoneyPuck.com](https://moneypuck.com/) and the [NHL API](https://api-web.nhle.com/).
